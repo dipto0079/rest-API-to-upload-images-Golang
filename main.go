@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"test/imageUpload"
+	"github.com/dipto0079/rest-API-to-upload-images-Golang/imageUpload"
 )
 
 const PORT = "8010"
