@@ -2,12 +2,11 @@ package main
 
 import (
 	"encoding/json"
-
 	"log"
 	"net/http"
 
-	"github.com/gorilla/mux"
 	"github.com/dipto0079/rest-API-to-upload-images-Golang/imageUpload"
+	"github.com/gorilla/mux"
 )
 
 const PORT = "8010"
@@ -33,10 +32,8 @@ func Ping(w http.ResponseWriter, r *http.Request) {
 }
 
 func cusUpload(w http.ResponseWriter, r *http.Request) {
-
 	_, js := imageUpload.UploadImages(w, r)
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(js)
-
 }
